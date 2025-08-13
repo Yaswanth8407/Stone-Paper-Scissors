@@ -1,0 +1,87 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: turquoise;
+}
+
+.vs{
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+#you{
+    border: 3px solid white;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 3rem;
+}
+
+#vs{
+    font-size: 5rem; ;
+}
+
+#bot{
+    border: 3px solid white;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 3rem;
+}
+
+.move{
+    height: 40vh;
+    text-align: center;
+}
+
+#selectyourmove{
+    font-size: 3rem;
+}
+
+.selectmove{
+    height: 35vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+#stone{
+    border: 3px solid white;
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    background-image: url(stone.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#paper{
+    border: 3px solid white;
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    background-image: url(paper.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#scissors{
+    border: 3px solid white;
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    background-image: url(scissors.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
