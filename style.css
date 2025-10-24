@@ -15,28 +15,23 @@ body{
     gap: 50px;
 }
 
-#you{
+.you-safety , .bot-safety{
     border: 3px solid white;
     height: 300px;
     width: 300px;
     border-radius: 50%;
     display: grid;
-    place-items: center;
+    place-items: end center;
+    overflow: hidden;
+}
+
+#you , #bot{
     font-size: 3rem;
+    background-color: aliceblue;
 }
 
 #vs{
-    font-size: 5rem; ;
-}
-
-#bot{
-    border: 3px solid white;
-    height: 300px;
-    width: 300px;
-    border-radius: 50%;
-    display: grid;
-    place-items: center;
-    font-size: 3rem;
+    font-size: 5rem;
 }
 
 .move{
@@ -56,7 +51,7 @@ body{
     gap: 50px;
 }
 
-#stone{
+.stone{
     border: 3px solid white;
     height: 250px;
     width: 250px;
@@ -66,7 +61,7 @@ body{
     background-size: cover;
 }
 
-#paper{
+.paper{
     border: 3px solid white;
     height: 250px;
     width: 250px;
@@ -76,7 +71,7 @@ body{
     background-size: cover;
 }
 
-#scissors{
+.scissors{
     border: 3px solid white;
     height: 250px;
     width: 250px;
@@ -84,4 +79,43 @@ body{
     background-image: url(scissors.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.result-stone{
+    border: 3px solid white;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    display: grid;
+    place-items: end center;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(stone.jpeg);
+}
+
+.result-paper{
+    border: 3px solid white;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    display: grid;
+    place-items: end center;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(paper.jpeg);
+}
+
+.result-scissors{
+    border: 3px solid white;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    display: grid;
+    place-items: end center;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(scissors.jpeg);
 }
