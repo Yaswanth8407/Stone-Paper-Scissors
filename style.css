@@ -119,3 +119,24 @@ body{
     background-size: cover;
     background-image: url(scissors.jpeg);
 }
+
+.popup {
+    height: 600px;
+    width: 1200px;
+    position: fixed;
+    background-color: turquoise;
+    border-radius: 30px;
+    border: 3px solid white;
+    z-index: 100;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+}
+
+.popup-need{
+    opacity: 0.25;
+}

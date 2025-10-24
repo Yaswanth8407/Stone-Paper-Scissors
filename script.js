@@ -1,40 +1,73 @@
+const moveButtons = document.querySelector('.selectmove').querySelectorAll('button');
+let selection = "";
+let botSelection = "";
+
 function bot() {
     let botMove = Math.floor(Math.random() * 3);
-    
-    
-    if (botMove === 0) {
+
+switch (botMove) {
+    case 0:
         document.querySelector("#bot").classList.add("result-stone");
-        return "stone";
-    } else if (botMove === 1) {
+        botSelection = "stone";
+        break;
+
+    case 1:
         document.querySelector("#bot").classList.add("result-paper");
-        return "paper";
-    } else {
+        botSelection = "paper";
+        break;
+
+    case 2:
         document.querySelector("#bot").classList.add("result-scissors");
-        return "scissors";
-    }
+        botSelection = "scissors";
+        break;
 }
-const moveButtons = document.querySelector('.selectmove').querySelectorAll('button');
+}
 
 moveButtons.forEach(button => {
     button.addEventListener("click", (event) => {
+        moveButtons.forEach(btn => btn.disabled = true);
         let targetButton = event.currentTarget.className;
-        if (targetButton == "stone") {
-            document.querySelector("#you").classList.add("result-stone");
-            // button.removeEventListener("click", handleMoveClick)
-            bot();
-            return "stone";
+        switch (targetButton) {
+            case "stone":
+                document.querySelector("#you").classList.add("result-stone");
+                bot();
+                selection = "stone";
+                break;
+
+            case "paper":
+                document.querySelector("#you").classList.add("result-paper");
+                bot();
+                selection = "paper";
+                break;
+
+            case "scissors":
+                document.querySelector("#you").classList.add("result-scissors");
+                bot();
+                selection = "scissors";
+                break;
         }
-        else if (targetButton == "paper"){
-            document.querySelector("#you").classList.add("result-paper");
-            // button.removeEventListener("click", handleMoveClick)
-            bot();
-            return "paper";
+
+        
+        setTimeout(() => {
+        const popupDiv = document.createElement("div");
+        popupDiv.className = "popup";
+        const scriptTag = document.querySelector("body > script");
+        scriptTag.parentNode.insertBefore(popupDiv, scriptTag);
+        document.querySelector(".imp-for-bg").classList.add("popup-need");
+
+
+        if (selection === botSelection) {
+            document.querySelector(".popup").innerText = "It's a tie!";
+        } 
+        else if ((selection === "stone" && botSelection === "scissors") ||
+           (selection === "paper" && botSelection === "stone") ||
+           (selection === "scissors" && botSelection === "paper")) {
+            document.querySelector(".popup").innerText = "You win!";
         } 
         else {
-            document.querySelector("#you").classList.add("result-scissors");
-            // button.removeEventListener("click", handleMoveClick)
-            bot();
-            return "scissors";
+            document.querySelector(".popup").innerText = "You lose!";
         }
+        }, 1000);
+    })
     });
-});
+
