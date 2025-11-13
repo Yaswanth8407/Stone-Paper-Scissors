@@ -73,7 +73,7 @@ moveButtons.forEach(button => {
 
             if (selection === botSelection) {
                 document.querySelector(".popup").style.border = "5px solid rgba(146, 51, 234, 0.65)";
-                document.querySelector(".sentence").innerText = "(It's a tie!🤝)";
+                document.querySelector(".sentence").innerText = "It's a tie!🤝";
                 tie++;
                 document.querySelector(".tiecount").textContent = tie;
             } else if (
@@ -82,12 +82,12 @@ moveButtons.forEach(button => {
                 (selection === "scissors" && botSelection === "paper")
             ) {
                 document.querySelector(".popup").style.border = "5px solid rgba(37, 99, 235, 0.65)";
-                document.querySelector(".sentence").innerText = "(Flawless Victory!🏆⚔️)";
+                document.querySelector(".sentence").innerText = "Flawless Victory!🏆⚔️";
                 yourscore++;
                 document.querySelector(".wincount").textContent = yourscore;
             } else {
                 document.querySelector(".popup").style.border = "5px solid rgba(220, 38, 38, 0.65)";
-                document.querySelector(".sentence").innerText = "(Defeat accepted... or rematch?☠️)";
+                document.querySelector(".sentence").innerText = "Defeat accepted... or rematch?☠️";
                 botscore++;
                 document.querySelector(".lostcount").textContent = botscore;
             }
