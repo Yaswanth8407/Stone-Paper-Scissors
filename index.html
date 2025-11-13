@@ -1,35 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stone-Paper-Scissors</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body> 
-    <div class="imp-for-bg">                               
-        <div class="vs">
-            <div class="you-safety">
-                <div id="you">YOU</div>
-            </div>
-            <p id="vs">VS</p>
-            <div class="bot-safety">
-                <div id="bot">BOT</div>
-            </div>
+
+<body>
+    <div class="scores">
+        <div class="wins score-boxes">
+            <div>Wins :</div>
+            <div class="wincount count">0</div>
         </div>
-        
-        <div class="move">
-        <p id="selectyourmove">Select Your Move<p>
-            <div class="selectmove">
-                <button class="stone"></button>
-                <button class="paper"></button>
-                <button class="scissors"></button>
-            </div>
+        <div class="ties score-boxes">
+            <div>Ties :</div>
+            <div class="tiecount count">0</div>
+        </div>
+        <div class="lost score-boxes">
+            <div>Lost :</div>
+            <div class="lostcount count">0</div>
         </div>
     </div>
 
 
+    <div class="hero-section">
+        <div class="imp-for-bg">
+            <div class="vs">
+                <div class="icontext">
+                    <div class="you que">?</div>
+                    <div id="youtext">YOU</div>
+                </div>
 
+                <p id="vs">VS</p>
+
+                <div class="icontext">
+                    <div class="bot que">?</div>
+                    <div id="bottext">BOT</div>
+                </div>
+            </div>
+
+            <div class="move">
+                <p id="selectyourmove">Select Your Move</p>
+                <div class="selectmove">
+                    <button class="stone">✊</button>
+                    <button class="paper">✋</button>
+                    <button class="scissors">✌️</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup">
+        <div class="sentence"></div>
+        <div class="ctrlbtns">
+            <button class="tryagain">Try again</button>
+            <button class="reset">Reset game</button>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
+
 </html>

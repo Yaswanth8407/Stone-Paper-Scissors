@@ -1,142 +1,313 @@
-*{
+* {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
+    font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
-body{
-    background-color: turquoise;
+html,
+body {
+    height: 100%;
+    overflow: hidden;
 }
 
-.vs{
-    height: 60vh;
+body {
+    background: linear-gradient(135deg, #2dd4bf, #22d3ee, #22d3ee, #34d399);
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- SCORES SECTION --- */
+.scores {
+    margin-top: 2vh;
+    width: 50%;
+    height: 25vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    align-self: center;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+    box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.25);
+}
+
+.score-boxes {
+    padding: 10px 30px;
+    border-radius: 15px;
+    height: 73%;
+    width: 28%;
+}
+
+.wins {
+    background: linear-gradient(to bottom right, #3b82f6, #2563eb);
+}
+
+.ties {
+    background: linear-gradient(to bottom right, #a855f7, #9333ea);
+}
+
+.lost {
+    background: linear-gradient(to bottom right, #ef4444, #dc2626);
+}
+
+.count {
+    height: 60%;
+    font-size: 7rem;
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    transform: translateY(-30%);
+}
+
+/* --- MAIN GAME AREA --- */
+.hero-section {
+    flex: 1;
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imp-for-bg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* --- VS SECTION --- */
+.vs {
+    padding-top: 4vh;
+    height: 30vh;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 50px;
 }
 
-.you-safety , .bot-safety{
-    border: 3px solid white;
-    height: 300px;
-    width: 300px;
+.you,
+.bot {
+    border: 8px solid white;
+    height: 200px;
+    width: 200px;
     border-radius: 50%;
     display: grid;
     place-items: end center;
     overflow: hidden;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
 }
 
-#you , #bot{
-    font-size: 3rem;
+#youtext,
+#bottext {
+    padding: 10px;
+    margin-top: 5px;
+    font-size: 2rem;
     background-color: aliceblue;
-}
-
-#vs{
-    font-size: 5rem;
-}
-
-.move{
-    height: 40vh;
+    border-radius: 100px;
     text-align: center;
 }
 
-#selectyourmove{
-    font-size: 3rem;
+#vs {
+    font-size: 5rem;
 }
 
-.selectmove{
-    height: 35vh;
+/* --- MOVE SELECTION SECTION --- */
+.move {
+    height: 40%;
+    text-align: center;
+}
+
+#selectyourmove {
+    font-size: 3rem;
+    margin-top: 70px;
+}
+
+.selectmove {
+    height: 25vh;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 50px;
 }
 
-.stone{
-    border: 3px solid white;
-    height: 250px;
-    width: 250px;
+.stone,
+.paper,
+.scissors {
+    border: 7px solid white;
+    height: 150px;
+    width: 150px;
     border-radius: 50%;
-    background-image: url(stone.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
+    transition: all 0.25s ease;
 }
 
-.paper{
-    border: 3px solid white;
-    height: 250px;
-    width: 250px;
-    border-radius: 50%;
-    background-image: url(paper.jpeg);
-    background-repeat: no-repeat;
-    background-size: cover;
+.stone {
+    font-size: 5rem;
+    background-color: rgb(0, 211, 242);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.scissors{
-    border: 3px solid white;
-    height: 250px;
-    width: 250px;
-    border-radius: 50%;
-    background-image: url(scissors.jpeg);
-    background-repeat: no-repeat;
-    background-size: cover;
+.paper {
+    font-size: 5rem;
+    background-color: rgb(255, 100, 103);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.result-stone{
-    border: 3px solid white;
-    height: 300px;
-    width: 300px;
-    border-radius: 50%;
-    display: grid;
-    place-items: end center;
-    overflow: hidden;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url(stone.jpeg);
+.scissors {
+    font-size: 5rem;
+    background-color: rgb(253, 199, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.result-paper{
-    border: 3px solid white;
-    height: 300px;
-    width: 300px;
+/*  --- question marks---*/
+
+.que {
+    border: 8px solid white;
+    height: 200px;
+    width: 200px;
     border-radius: 50%;
     display: grid;
-    place-items: end center;
+    place-items: center;
     overflow: hidden;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url(paper.jpeg);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
+    font-size: 6rem;
+    color: rgba(255, 255, 255, 0.5);
 }
 
-.result-scissors{
-    border: 3px solid white;
-    height: 300px;
-    width: 300px;
+/*  --- change after the eventlistener ---   */
+.eventclick {
+    border: 8px solid white;
+    height: 200px;
+    width: 200px;
     border-radius: 50%;
     display: grid;
-    place-items: end center;
+    place-items: center;
     overflow: hidden;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url(scissors.jpeg);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
+    font-size: 6rem;
 }
 
+.spin {
+    border: 8px solid white;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
+    font-size: 6rem;
+    animation: emojirotate 0.6s linear infinite;
+}
+
+/* --- POPUP --- */
 .popup {
-    height: 600px;
-    width: 1200px;
+    height: 350px;
+    width: 700px;
     position: fixed;
-    background-color: turquoise;
-    border-radius: 30px;
-    border: 3px solid white;
-    z-index: 100;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    display:flex;
+    border-radius: 25px;
+    backdrop-filter: blur(50px);
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    font-weight: 600;
+    font-size: 4rem;
+    display: none;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 5rem;
+    text-align: center;
+    z-index: 100;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(0.8);
+    transition: opacity 1s ease, transform 2s ease;
 }
 
-.popup-need{
-    opacity: 0.25;
+.tryagain {
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 12px 28px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(0, 114, 255, 0.35);
+    transition: all 0.25s ease;
+}
+
+.reset {
+    background: linear-gradient(135deg, #ff6a00, #ee0979);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 12px 28px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(238, 9, 121, 0.35);
+    transition: all 0.25s ease;
+}
+
+.show {
+    animation: popupShow 1s linear 1;
+    /* animation: name duration timing-function iteration-count direction fill-mode; */
+}
+
+.stone:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.25);
+}
+
+.paper:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.25);
+}
+
+.scissors:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.25);
+}
+
+.tryagain:hover,
+.reset:hover,
+.hovermove:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.25);
+}
+
+@keyframes emojirotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes popupShow {
+    0% {
+        opacity: 0.9;
+        transform: translate(-50%, -50%) scale(0.8);
+    }
+
+    50% {
+        opacity: 0.9;
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
