@@ -73,7 +73,7 @@ moveButtons.forEach(button => {
 
             if (selection === botSelection) {
                 document.querySelector(".popup").style.border = "5px solid rgba(146, 51, 234, 0.65)";
-                document.querySelector(".sentence").innerText = "It's a tie!🤝)";
+                document.querySelector(".sentence").innerText = "It's a tie!🤝";
                 tie++;
                 document.querySelector(".tiecount").textContent = tie;
             } else if (
