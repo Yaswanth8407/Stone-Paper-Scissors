@@ -12,9 +12,22 @@ body {
 }
 
 body {
-    background: linear-gradient(120deg, #3f46b5, #787def);
-    display: flex;
-    flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background: radial-gradient(circle at top center, #1a1a40 0%, #0f0c29 30%, #24243e 70%, #000000 100%);
+  background-attachment: fixed;
+  /* animation: backgroundMove 1s ease-in-out infinite alternate; */
+}
+
+@keyframes backgroundMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
 }
 
 /* --- SCORES SECTION --- */
@@ -31,7 +44,7 @@ body {
     border-radius: 20px;
     color: rgb(255, 255, 255);
     font-size: 1.5rem;
-    box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.25);
+    box-shadow: 15px 15px 20px rgba(14, 13, 13, 0.25);
 }
 
 .score-boxes {
@@ -42,16 +55,23 @@ body {
 }
 
 .wins {
-    background: linear-gradient(to bottom right, #3b82f6, #2563eb);
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    box-shadow: 0 4px 25px rgba(0, 114, 255, 0.4);
+    border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 .ties {
-    background: linear-gradient(to bottom right, #a855f7, #9333ea);
+    background: linear-gradient(135deg, #a855f7, #6b21a8);
+    box-shadow: 0 4px 25px rgba(168, 85, 247, 0.4);
+    border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 .lost {
-    background: linear-gradient(to bottom right, #ef4444, #dc2626);
+    background: linear-gradient(135deg, #ff416c, #ff4b2b);
+    box-shadow: 0 4px 25px rgba(255, 75, 43, 0.4);
+    border: 2px solid rgba(255, 255, 255, 0.2);
 }
+
 
 .count {
     height: 60%;
@@ -84,7 +104,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 50px;
+    gap: 120px;
 }
 
 .you,
@@ -96,13 +116,15 @@ body {
     display: grid;
     place-items: end center;
     overflow: hidden;
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
+    box-shadow: 10px 10px 10px rgba(210, 60, 60, 0.25);
 }
+
+
 
 #youtext,
 #bottext {
     padding: 10px;
-    margin-top: 5px;
+    margin-top: 35px;
     font-size: 2rem;
     background-color: aliceblue;
     border-radius: 100px;
@@ -111,6 +133,7 @@ body {
 
 #vs {
     font-size: 5rem;
+    color: #fff;
 }
 
 /* --- MOVE SELECTION SECTION --- */
@@ -122,6 +145,14 @@ body {
 #selectyourmove {
     font-size: 3rem;
     margin-top: 70px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    padding: 15px 40px;
+    border-radius: 15px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    display: inline-block;
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
 }
 
 .selectmove {
