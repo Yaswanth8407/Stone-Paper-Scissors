@@ -219,7 +219,7 @@ body {
     left: 50%;
     border-radius: 25px;
     backdrop-filter: blur(50px);
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(0, 0, 0, 0.3);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
     color: #fff;
     font-weight: 600;
@@ -237,11 +237,12 @@ body {
 
 .tryagain {
     background: linear-gradient(135deg, #00c6ff, #0072ff);
+    border: 2px solid rgb(133, 131, 131);
     color: white;
-    border: none;
     border-radius: 12px;
     padding: 12px 28px;
     font-weight: 600;
+    font-size: 1.5rem;
     cursor: pointer;
     box-shadow: 0 4px 14px rgba(0, 114, 255, 0.35);
     transition: all 0.25s ease;
@@ -250,10 +251,11 @@ body {
 .reset {
     background: linear-gradient(135deg, #ff6a00, #ee0979);
     color: white;
-    border: none;
+    border: 2px solid rgb(133, 131, 131);
     border-radius: 12px;
     padding: 12px 28px;
     font-weight: 600;
+    font-size: 1.5rem;
     cursor: pointer;
     box-shadow: 0 4px 14px rgba(238, 9, 121, 0.35);
     transition: all 0.25s ease;
