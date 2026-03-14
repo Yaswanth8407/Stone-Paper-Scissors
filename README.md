@@ -27,7 +27,7 @@ Play against a bot, track your score, and enjoy smooth animations and a modern U
 
 * **HTML5** – Structure of the game
 * **CSS3** – Styling, animations, and layout
-* **JavaScript (Vanilla JS)** – Game logic and DOM manipulation
+* **JavaScript** – Game logic and DOM manipulation
 
 ---
 
