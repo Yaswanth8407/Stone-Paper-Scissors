@@ -49,7 +49,7 @@ stone-paper-scissors/
 1. Clone the repository
 
 ```
-git clone https://github.com/yourusername/stone-paper-scissors.git
+git clone https://github.com/Yaswanth8407/Stone-Paper-Scissors.git
 ```
 
 2. Open the project folder.
